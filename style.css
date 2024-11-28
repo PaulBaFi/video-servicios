@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+* {
+  outline: none;
+}
+
+:root {
+  --brands-light: #F5F5F5;
+  --brands-primary: #03172D;
+  --brands-medium: #6A7077;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 14px;
+}
+
+th,
+td {
+  border-radius: 7px;
+  padding: 8px 16px;
+}
+
+tr:hover td {
+  background-color: var(--brands-light);
+}
+
+#video-controls input[id="seek-bar"] {
+  width: 100%;
+}
+
+#video-controls input[id="volume-bar"] {
+  width: 100px;
+}

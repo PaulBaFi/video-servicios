@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Web de Servicios</title>
+
+        <link rel="stylesheet" href="./style.css" />
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script
+          src="https://kit.fontawesome.com/aeeba1d16d.js"
+          crossorigin="anonymous"
+        ></script>
+      </head>
+
+      <body>
+        <header>
+          <div
+            id="prueba"
+            class="relative text-light flex flex-col items-center justify-center lg:aspect-[7/2] aspect-3/4 bg-primary bg-opacity-60"
+          >
+            <div
+              class="absolute w-full h-full -z-10 bg-video bg-no-repeat bg-center bg-cover blur"
+            ></div>
+
+            <span
+              id="volume-percentage"
+              class="hidden absolute top-4 left-1/2 -translate-x-1/2 py-2 px-4 bg-primary bg-opacity-60 rounded-md text-white"
+            ></span>
+
+            <video
+              id="my-video"
+              class="h-full"
+              src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+              poster="./images/video-poster.webp"
+            >
+              Su navegador no soporta videos embebidos, puede descargar el video
+              aquí
+              <a
+                download
+                href="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+                >descargar</a
+              >
+            </video>
+
+            <div
+              class="absolute -bottom-5 w-[880px] max-w-full mx-auto px-0 md:px-4 text-xs"
+            >
+              <div
+                id="video-controls"
+                class="flex gap-1 items-center justify-between p-2 bg-primary md:rounded-lg w-full"
+              >
+                <button
+                  id="play-btn"
+                  class="pt-2 pb-1 px-3 rounded hover:bg-slate-800 hover:bg-opacity-50"
+                >
+                  <i class="fa-solid fa-play"></i>
+                </button>
+                <div class="flex w-fit pt-2 pb-1 pr-2">
+                  <span id="current-time">0:00</span> /
+                  <span id="total-time">0:00</span>
+                </div>
+                <input type="range" id="seek-bar" value="0" />
+                <button
+                  id="speed-btn"
+                  class="pt-2 pb-1 px-3 rounded hover:bg-slate-800 hover:bg-opacity-50"
+                >
+                  1x
+                </button>
+                <button
+                  id="mute-btn"
+                  class="pt-2 pb-1 px-3 rounded hover:bg-slate-800 hover:bg-opacity-50"
+                >
+                  <i class="fa-solid fa-volume-high"></i>
+                </button>
+                <input
+                  type="range"
+                  id="volume-bar"
+                  min="0"
+                  max="1"
+                  step="0.05"
+                  value="1"
+                />
+                <button
+                  type="button"
+                  id="full-screen-btn"
+                  class="pt-2 pb-1 px-3 rounded hover:bg-slate-800 hover:bg-opacity-50"
+                >
+                  <i class="fa-solid fa-expand"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-[880px] max-w-full mx-auto px-4">
+            <div class="pt-12">
+              <h1 class="group text-xl font-bold">
+                <a href="https://youtube.com" target="_blank">
+                  <i class="group-hover:text-red-500 fa-brands fa-youtube"></i>
+                  Video de instalación de sistema operativo Windows 10
+                  Profesional
+                </a>
+              </h1>
+              <p class="text-parcial">10 de diciembre del 2024</p>
+            </div>
+          </div>
+        </header>
+
+        <main class="w-full py-4">
+          <div class="w-[880px] max-w-full mx-auto px-4">
+            <div
+              class="mt-8 mb-12 rounded-lg bg-primary text-light overflow-hidden"
+            >
+              <details open>
+                <summary
+                  class="flex items-center justify-between cursor-pointer text-lg font-bold hover:bg-hdark p-4"
+                >
+                  <span>Tabla de contenidos</span>
+                  <i class="fa-solid fa-sort-down -mt-2"></i>
+                </summary>
+                <div class="flex flex-col gap-3 p-4">
+                  <a href="#section-1" class="hover:text-secondary"
+                    >Sección 01</a
+                  >
+                  <a href="#section-2" class="hover:text-secondary"
+                    >Sección 02</a
+                  >
+                  <a href="#section-3" class="hover:text-secondary"
+                    >Sección 03</a
+                  >
+                  <a href="#resources" class="hover:text-secondary"
+                    >Recursos utilizados</a
+                  >
+                </div>
+              </details>
+            </div>
+
+            <div>
+              <h3 class="pt-4 pb-2 text-lg font-bold">Primer subtitulo</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Molestiae, dolor placeat expedita, enim asperiores fugit
+                corrupti in, quas ratione eveniet numquam animi iure excepturi
+                incidunt labor voluptas ullam ad necessitatibus?
+              </p>
+              <h3 class="pt-4 pb-2 text-lg font-bold">Segundo subtitulo</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Molestiae, dolor placeat expedita, enim asperiores fugit
+                corrupti in, quas ratione eveniet numquam animi iure excepturi
+                incidunt labore voluptas ullam ad necessitatibus?Lorem ipsum
+                dolor, sit amet consectetur adipisicing elit. Molestiae, dolor
+                placeat expedita, enim asperiores fugit corrupti in, quas
+                ratione eveniet numquam animi iure excepturi incidunt labore
+                voluptas ullam ad necessitatibus?Lorem ipsum dolor, sit amet
+                consectetur adipisicing elit. Molestiae, dolor placeat expedita,
+                enim asperiores fugit corrupti in, quas ratione eveniet numquam
+                animi iure excepturi incidunt labore voluptas ullam ad
+                necessitatibus?Lorem ipsum dolor, sit amet consectetur
+                adipisicing elit. Molestiae, dolor placeat expedita, enim
+                asperiores fugit corrupti in, quas ratione eveniet numquam animi
+                iure excepturi incidunt labore voluptas ullam ad necessitatibus?
+              </p>
+
+              <figure class="my-4">
+                <img
+                  class="rounded-lg overflow-hidden"
+                  src="https://media.es.wired.com/photos/651b0efe5ea006cdc449d0c2/16:9/w_1600,c_limit/circle-gear-GettyImages-1474584410.jpg"
+                  alt="Descripción de la imagen 01"
+                />
+                <figcaption class="text-right text-parcial italic mt-2 text-xs">
+                  Esta es la descripción o leyenda de la imagen.
+                </figcaption>
+              </figure>
+
+              <h3 id="section-3" class="pt-4 pb-2 text-lg font-bold">
+                Tercero subtitulo
+              </h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Molestiae, dolor placeat expedita, enim asperiores fugit
+                corrupti in,Lorem ipsum dolor, sit amet consectetur adipisicing
+                elit. Molestiae, dolor placeat expedita, enim asperiores fugit
+                corrupti in, quas ratione eveniet numquam animi iure excepturi
+                incidunt labore voluptas ullam ad necessitatibus? quas ratione
+                eveniet numquam animi iure excepturi incidunt labore voluptas
+                ullam ad necessitatibus?
+              </p>
+            </div>
+
+            <div id="resources" class="py-12 overflow-x-auto">
+              <h3 class="text-lg font-bold">Recursos utilizados</h3>
+              <table class="text-left mt-4 w-full border-separate min-w-96">
+                <tr class="bg-primary text-white">
+                  <th>Recurso</th>
+                  <th>Descripción</th>
+                  <th>Descarga</th>
+                </tr>
+                <tr>
+                  <td>Imagen ISO</td>
+                  <td>Gestor de instalación</td>
+                  <td>
+                    <a
+                      href=""
+                      target="_blank"
+                      class="w-full h-full hover:text-sky-500"
+                    >
+                      microsoft.com
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Virtual Box</td>
+                  <td>Gestor de virtualización</td>
+                  <td>
+                    <a
+                      href="https://www.virtualbox.org/wiki/Downloads"
+                      target="_blank"
+                      class="w-full h-full hover:text-sky-500"
+                    >
+                      virtualbox.org
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </main>
+
+        <footer class="w-full pb-12 pt-4 bg-light text-xs">
+          <div class="w-[880px] max-w-full mx-auto px-4">
+            <div class="flex flex-wrap justify-between py-8">
+              <ul class="space-y-2">
+                <li class="text-parcial">Responsables</li>
+                <li>Barahona Figueroa Paul Alexis</li>
+                <li>Muñoz Castro Olenka del Rosario</li>
+                <li>Torres Sacha Isaura Isabel</li>
+              </ul>
+              <ul class="space-y-2">
+                <li class="text-parcial">Docente</li>
+                <li>Mg. Melendez Ramos Julio Genaro</li>
+                <br />
+                <li class="text-parcial">Asignatura</li>
+                <li>Sistemas operativos</li>
+                <br />
+                <li class="text-parcial">Ciclo Académico</li>
+                <li>IV Ciclo | 2024 - II</li>
+              </ul>
+              <br />
+              <ul class="space-y-2">
+                <li>
+                  <img
+                    class="w-60"
+                    src="https://landing.upsjb.edu.pe/hs-fs/hubfs/logo-Nov-15-2020-09-10-40-79-PM.png?width=350&height=90&name=logo-Nov-15-2020-09-10-40-79-PM.png"
+                    alt="Logo Universidad Privada San Juan Bautista"
+                  />
+                </li>
+                <br />
+                <li class="text-parcial">Carrera</li>
+                <li>Ingeniería de Sistemas</li>
+                <br />
+                <li class="text-parcial">Facultad</li>
+                <li>Ingenierías</li>
+              </ul>
+            </div>
+            <hr class="w-full border-parcial" />
+            <div class="text-center md:text-left text-parcial py-4">
+              <p>Copyright © 2024 | Todos los derechos Reservados</p>
+            </div>
+          </div>
+        </footer>
+
+        <script>
+          tailwind.config = {
+            theme: {
+              extend: {
+                colors: {
+                  primary: "#03172D",
+                  secondary: "#0EA5E9",
+                  light: "#F5F5F5",
+                  dark: "#212325",
+                  parcial: "#6A7077",
+                  hdark: "#031121",
+                },
+                backgroundImage: {
+                  video: "url('./images/video-poster.webp')",
+                },
+              },
+            },
+          };
+        </script>
+      </body>
+    </html>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
