@@ -1,305 +1,333 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
-    <link type="text/css" rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+    <title>Arimana Bazar</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles.css" />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Icons -->
+    <script
+      src="https://kit.fontawesome.com/aeeba1d16d.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
+
   <body>
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Web de Servicios</title>
-
-        <link rel="stylesheet" href="./style.css" />
-
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script
-          src="https://kit.fontawesome.com/aeeba1d16d.js"
-          crossorigin="anonymous"
-        ></script>
-      </head>
-
-      <body>
-        <header>
-          <div
-            id="prueba"
-            class="relative text-light flex flex-col items-center justify-center lg:aspect-[7/2] aspect-3/4 bg-primary bg-opacity-60"
+    <nav class="w-full py-4">
+      <div class="max-w-full w-[1200px] m-auto flex justify-between">
+        <div class="py-2 px-4">
+          <a
+            href="/index.html"
+            class="hover:font-medium transition-all flex items-center justify-between gap-2 text-lg"
           >
-            <div
-              class="absolute w-full h-full -z-10 bg-video bg-no-repeat bg-center bg-cover blur"
-            ></div>
+            <img
+              class="w-8 rounded-full"
+              src="/images/logo.jpg"
+              alt="Logo de Arimana Bazar"
+            />
+            <span>Arimana Bazar</span>
+          </a>
+        </div>
+        <div
+          class="py-2 px-4 space-x-4 flex items-center justify-between text-lg"
+        >
+          <a href="#videos" class="hover:text-red-600">
+            <i class="fa-brands fa-youtube md:hidden block"></i>
+            <span class="hidden md:block">Videos</span>
+          </a>
+          <a href="#nosotros" class="hover:text-indigo-600">
+            <i class="fa-solid fa-user-group md:hidden block"></i>
+            <span class="hidden md:block">Nosotros</span>
+          </a>
+          <a
+            href="https://www.facebook.com/arimanabazarica/"
+            target="_blank"
+            class="hover:text-blue-600"
+          >
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
 
-            <span
-              id="volume-percentage"
-              class="hidden absolute top-4 left-1/2 -translate-x-1/2 py-2 px-4 bg-primary bg-opacity-60 rounded-md text-white"
-            ></span>
+    <header class="bg-slate-100">
+      <div
+        class="max-w-full w-[1200px] m-auto p-4 flex flex-col lg:flex-row gap-8 justify-between items-center"
+      >
+        <video
+          autoplay
+          preload
+          loop
+          muted
+          class="w-80 max-w-full rounded-md hidden lg:block"
+          src="/images/video-uno.mp4"
+        ></video>
 
-            <video
-              id="my-video"
-              class="h-full"
-              src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-              poster="./images/video-poster.webp"
+        <div class="text-center space-y-5">
+          <h1 class="text-6xl font-semibold italic">Arimana Bazar</h1>
+          <p class="m-auto max-w-96">
+            Nos esforzamos por ser más que un bazar, un socio confiable que
+            entiende y atiende sus necesidades, mientras promovemos un entorno
+            laboral justo.
+          </p>
+          <div class="flex items-center justify-center gap-2">
+            <a
+              href="https://www.google.com/maps/dir/-13.7166848,-76.218368/-14.0445861,-75.7431735/@-13.8790401,-76.3232262,10z/data=!3m1!4b1!4m4!4m3!1m1!4e1!1m0?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              class="hover:bg-slate-200 w-12 h-12 flex items-center justify-center border rounded-full"
             >
-              Su navegador no soporta videos embebidos, puede descargar el video
-              aquí
-              <a
-                download
-                href="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-                >descargar</a
-              >
-            </video>
-
-            <div
-              class="absolute -bottom-5 w-[880px] max-w-full mx-auto px-0 md:px-4 text-xs"
+              <i class="transition-all fa-solid fa-location-dot"></i>
+            </a>
+            <a
+              href="tel:+51944920774"
+              class="hover:bg-slate-200 w-12 h-12 flex items-center justify-center border rounded-full"
             >
-              <div
-                id="video-controls"
-                class="flex gap-1 items-center justify-between p-2 bg-primary md:rounded-lg w-full"
-              >
-                <button
-                  id="play-btn"
-                  class="pt-2 pb-1 px-3 rounded hover:bg-slate-800 hover:bg-opacity-50"
-                >
-                  <i class="fa-solid fa-play"></i>
-                </button>
-                <div class="flex w-fit pt-2 pb-1 pr-2">
-                  <span id="current-time">0:00</span> /
-                  <span id="total-time">0:00</span>
-                </div>
-                <input type="range" id="seek-bar" value="0" />
-                <button
-                  id="speed-btn"
-                  class="pt-2 pb-1 px-3 rounded hover:bg-slate-800 hover:bg-opacity-50"
-                >
-                  1x
-                </button>
-                <button
-                  id="mute-btn"
-                  class="pt-2 pb-1 px-3 rounded hover:bg-slate-800 hover:bg-opacity-50"
-                >
-                  <i class="fa-solid fa-volume-high"></i>
-                </button>
-                <input
-                  type="range"
-                  id="volume-bar"
-                  min="0"
-                  max="1"
-                  step="0.05"
-                  value="1"
-                />
-                <button
-                  type="button"
-                  id="full-screen-btn"
-                  class="pt-2 pb-1 px-3 rounded hover:bg-slate-800 hover:bg-opacity-50"
-                >
-                  <i class="fa-solid fa-expand"></i>
-                </button>
-              </div>
-            </div>
+              <i class="transition-all fa-solid fa-phone"></i>
+            </a>
+          </div>
+        </div>
+
+        <video
+          autoplay
+          preload
+          loop
+          muted
+          class="w-80 max-w-full rounded-md"
+          src="/images/video-dos.mp4"
+        ></video>
+      </div>
+    </header>
+
+    <main>
+      <div id="nosotros" class="max-w-full w-[1200px] m-auto py-24">
+        <!-- Mision y Vision -->
+        <div class="flex flex-col gap-4 md:flex-row px-4">
+          <div class="p-4 border rounded-md text-center">
+            <b class="text-3xl italic">
+              <i class="fa-solid fa-bullseye"></i>
+              Visión
+            </b>
+            <p class="mt-4 text-left">
+              Ser la franquicia N° 01 en el rubro de Bazar, así mismo, brindar
+              una oportunidad de trabajo y logro de metas de nuestros
+              colaboradores.
+            </p>
           </div>
 
-          <div class="w-[880px] max-w-full mx-auto px-4">
-            <div class="pt-12">
-              <h1 class="group text-xl font-bold">
-                <a href="https://youtube.com" target="_blank">
-                  <i class="group-hover:text-red-500 fa-brands fa-youtube"></i>
-                  Video de instalación de sistema operativo Windows 10
-                  Profesional
-                </a>
-              </h1>
-              <p class="text-parcial">10 de diciembre del 2024</p>
+          <div class="p-4 border rounded-md text-center">
+            <b class="text-3xl italic">
+              <i class="fa-solid fa-bullseye"></i>
+              Misión
+            </b>
+            <p class="mt-4 text-left">
+              Dar la mejor atención y asesoría a nuestros clientes, quienes se
+              preparan para asistir a los momentos más memorables de sus vidas.
+            </p>
+          </div>
+        </div>
+
+        <div class="px-4 my-4">
+          <div class="p-4 border rounded-md text-center">
+            <b class="text-3xl italic">
+              <i class="fa-solid fa-bullseye"></i>
+              Propósito
+            </b>
+            <p class="mt-4 text-left">
+              Construir relaciones duraderas con nuestros clientes brindándoles
+              una experiencia única a través de una amplia variedad de productos
+              que combinan calidad, diseño y funcionalidad, ayudándolos a
+              celebrar y marcar los momentos más importantes de sus vidas.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Productos -->
+      <div class="bg-slate-100">
+        <div class="max-w-full w-[1200px] m-auto text-center py-24 px-4">
+          <h2 class="text-6xl font-semibold italic">Productos</h2>
+          <!-- Bento images -->
+          <div class="flex gap-4 mt-12">
+            <div class="flex flex-col gap-4 w-1/2">
+              <img
+                src="/images/cuatro.jpg"
+                alt="Imagen de productos de Arimana Bazar"
+              />
+              <img
+                class="h-64 w-full object-cover object-center"
+                src="/images/once.jpg"
+                alt="Imagen de productos de Arimana Bazar"
+              />
+            </div>
+            <div class="flex flex-col gap-4 w-1/2">
+              <img
+                class="h-64 w-full object-cover object-center"
+                src="/images/dos.jpg"
+                alt="Imagen de productos de Arimana Bazar"
+              />
+              <img
+                src="/images/seis.jpg"
+                alt="Imagen de productos de Arimana Bazar"
+              />
             </div>
           </div>
-        </header>
+        </div>
+      </div>
+    </main>
 
-        <main class="w-full py-4">
-          <div class="w-[880px] max-w-full mx-auto px-4">
-            <div
-              class="mt-8 mb-12 rounded-lg bg-primary text-light overflow-hidden"
-            >
-              <details open>
-                <summary
-                  class="flex items-center justify-between cursor-pointer text-lg font-bold hover:bg-hdark p-4"
-                >
-                  <span>Tabla de contenidos</span>
-                  <i class="fa-solid fa-sort-down -mt-2"></i>
-                </summary>
-                <div class="flex flex-col gap-3 p-4">
-                  <a href="#section-1" class="hover:text-secondary"
-                    >Sección 01</a
-                  >
-                  <a href="#section-2" class="hover:text-secondary"
-                    >Sección 02</a
-                  >
-                  <a href="#section-3" class="hover:text-secondary"
-                    >Sección 03</a
-                  >
-                  <a href="#resources" class="hover:text-secondary"
-                    >Recursos utilizados</a
-                  >
-                </div>
-              </details>
-            </div>
+    <section id="videos" class="py-24">
+      <div
+        class="max-w-full w-[1200px] m-auto px-4 flex gap-4 flex-wrap items-center justify-center"
+      >
+        <div
+          class="border border-slate-400 rounded-md overflow-hidden aspect-3/4 w-[375px] transition-all hover:-rotate-2"
+        >
+          <button id="one-button" class="text-left p-4 space-y-2 h-full w-full">
+            <img class="mb-4" src="/images/poster-uno.jpg" alt="" />
+            <b>Instalación de Windows 10 Profesional</b>
+            <p>
+              Se realiza una explicación sobre la instalación del sistema
+              operativo Windows 10 Profesional. Para ello se utiliza la
+              herramienta de gestión Virtual Box.
+            </p>
+          </button>
+        </div>
 
-            <div>
-              <h3 class="pt-4 pb-2 text-lg font-bold">Primer subtitulo</h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Molestiae, dolor placeat expedita, enim asperiores fugit
-                corrupti in, quas ratione eveniet numquam animi iure excepturi
-                incidunt labor voluptas ullam ad necessitatibus?
-              </p>
-              <h3 class="pt-4 pb-2 text-lg font-bold">Segundo subtitulo</h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Molestiae, dolor placeat expedita, enim asperiores fugit
-                corrupti in, quas ratione eveniet numquam animi iure excepturi
-                incidunt labore voluptas ullam ad necessitatibus?Lorem ipsum
-                dolor, sit amet consectetur adipisicing elit. Molestiae, dolor
-                placeat expedita, enim asperiores fugit corrupti in, quas
-                ratione eveniet numquam animi iure excepturi incidunt labore
-                voluptas ullam ad necessitatibus?Lorem ipsum dolor, sit amet
-                consectetur adipisicing elit. Molestiae, dolor placeat expedita,
-                enim asperiores fugit corrupti in, quas ratione eveniet numquam
-                animi iure excepturi incidunt labore voluptas ullam ad
-                necessitatibus?Lorem ipsum dolor, sit amet consectetur
-                adipisicing elit. Molestiae, dolor placeat expedita, enim
-                asperiores fugit corrupti in, quas ratione eveniet numquam animi
-                iure excepturi incidunt labore voluptas ullam ad necessitatibus?
-              </p>
+        <div
+          class="border border-slate-400 rounded-md overflow-hidden aspect-3/4 w-[375px] transition-all hover:-rotate-2"
+        >
+          <button id="two-button" class="text-left p-4 space-y-2 h-full w-full">
+            <img class="mb-4" src="/images/poster-dos.jpg" alt="" />
+            <b>Elaboración de la página web </b>
+            <p>
+              Explicación de la semántica, diseño y funcionalidades de la página
+              principal de Arimana Bazar centrada en el código para su
+              elaboración y despliegue.
+            </p>
+          </button>
+        </div>
 
-              <figure class="my-4">
-                <img
-                  class="rounded-lg overflow-hidden"
-                  src="https://media.es.wired.com/photos/651b0efe5ea006cdc449d0c2/16:9/w_1600,c_limit/circle-gear-GettyImages-1474584410.jpg"
-                  alt="Descripción de la imagen 01"
-                />
-                <figcaption class="text-right text-parcial italic mt-2 text-xs">
-                  Esta es la descripción o leyenda de la imagen.
-                </figcaption>
-              </figure>
+        <div
+          class="border border-slate-400 rounded-md overflow-hidden aspect-3/4 w-[375px] transition-all hover:-rotate-2"
+        >
+          <button id="three-button" class="text-left p-4 space-y-2 hull w-full">
+            <img class="mb-4" src="/images/poster-tres.jpg" alt="" />
+            <b>Configuración de Windows 10 Profesional </b>
+            <p>
+              El video aborda algunas configuraciones y personalizaciones para
+              el sistema operativo Windows 10 Profesional de la empresa Arimana
+              Bazar.
+            </p>
+          </button>
+        </div>
+      </div>
+    </section>
 
-              <h3 id="section-3" class="pt-4 pb-2 text-lg font-bold">
-                Tercero subtitulo
-              </h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Molestiae, dolor placeat expedita, enim asperiores fugit
-                corrupti in,Lorem ipsum dolor, sit amet consectetur adipisicing
-                elit. Molestiae, dolor placeat expedita, enim asperiores fugit
-                corrupti in, quas ratione eveniet numquam animi iure excepturi
-                incidunt labore voluptas ullam ad necessitatibus? quas ratione
-                eveniet numquam animi iure excepturi incidunt labore voluptas
-                ullam ad necessitatibus?
-              </p>
-            </div>
+    <dialog id="one-dialog" class="p-4 rounded-md w-full md:w-3/4 lg:w-2/4">
+      <form method="dialog">
+        <div class="flex items-center justify-between mb-4">
+          <p class="font-medium">
+            Instalación del sistema operativo Windows 10 Profesional
+          </p>
+          <button class="bg-red-500 px-2 rounded-md text-white">x</button>
+        </div>
+        <iframe
+          class="aspect-video"
+          width="100%"
+          height="auto"
+          src="https://www.youtube.com/embed/FyZXUuUgdZc?si=MUixi7JXNsIu-Chv"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </form>
+    </dialog>
 
-            <div id="resources" class="py-12 overflow-x-auto">
-              <h3 class="text-lg font-bold">Recursos utilizados</h3>
-              <table class="text-left mt-4 w-full border-separate min-w-96">
-                <tr class="bg-primary text-white">
-                  <th>Recurso</th>
-                  <th>Descripción</th>
-                  <th>Descarga</th>
-                </tr>
-                <tr>
-                  <td>Imagen ISO</td>
-                  <td>Gestor de instalación</td>
-                  <td>
-                    <a
-                      href=""
-                      target="_blank"
-                      class="w-full h-full hover:text-sky-500"
-                    >
-                      microsoft.com
-                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Virtual Box</td>
-                  <td>Gestor de virtualización</td>
-                  <td>
-                    <a
-                      href="https://www.virtualbox.org/wiki/Downloads"
-                      target="_blank"
-                      class="w-full h-full hover:text-sky-500"
-                    >
-                      virtualbox.org
-                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-                  </td>
-                </tr>
-              </table>
-            </div>
+    <dialog id="two-dialog" class="p-4 rounded-md w-full md:w-3/4 lg:w-2/4">
+      <form method="dialog">
+        <div class="flex items-center justify-between mb-4">
+          <p class="font-medium">Elaboración de la página web</p>
+          <button class="bg-red-500 px-2 rounded-md text-white">x</button>
+        </div>
+        <iframe
+          class="aspect-video"
+          width="100%"
+          height="auto"
+          src="https://www.youtube.com/embed/ylEW-VYuZNo?si=JxjprVDCkm3m61pD"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </form>
+    </dialog>
+
+    <dialog id="three-dialog" class="p-4 rounded-md w-full md:w-3/4 lg:w-2/4">
+      <form method="dialog">
+        <div class="flex items-center justify-between mb-4">
+          <p class="font-medium">Configuración de Windows 10 Profesional</p>
+          <button class="bg-red-500 px-2 rounded-md text-white">x</button>
+        </div>
+        <iframe
+          class="aspect-video"
+          width="100%"
+          height="auto"
+          src="https://www.youtube.com/embed/FyZXUuUgdZc?si=MUixi7JXNsIu-Chv"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </form>
+    </dialog>
+
+    <footer class="bg-slate-100 py-24">
+      <div class="max-w-full w-[1200px] m-auto px-4">
+        <div
+          class="flex flex-wrap items-center md:items-start justify-center md:justify-between flex-col sm:flex-row gap-8 pb-8 text-center md:text-left"
+        >
+          <div class="space-y-2 md:w-auto w-full">
+            <p class="text-slate-400 font-medium italic">Responsables</p>
+            <p>Barahona Figueroa Paul Alexis</p>
+            <p>Muñoz Castro Olenka del Rosario</p>
+            <p>Torres Sacha Isaura Isabel</p>
           </div>
-        </main>
+          <div class="space-y-2 md:w-auto w-full">
+            <p class="text-slate-400 font-medium italic">Asignatura</p>
+            <p>Sistemas Operativos</p>
 
-        <footer class="w-full pb-12 pt-4 bg-light text-xs">
-          <div class="w-[880px] max-w-full mx-auto px-4">
-            <div class="flex flex-wrap justify-between py-8">
-              <ul class="space-y-2">
-                <li class="text-parcial">Responsables</li>
-                <li>Barahona Figueroa Paul Alexis</li>
-                <li>Muñoz Castro Olenka del Rosario</li>
-                <li>Torres Sacha Isaura Isabel</li>
-              </ul>
-              <ul class="space-y-2">
-                <li class="text-parcial">Docente</li>
-                <li>Mg. Melendez Ramos Julio Genaro</li>
-                <br />
-                <li class="text-parcial">Asignatura</li>
-                <li>Sistemas operativos</li>
-                <br />
-                <li class="text-parcial">Ciclo Académico</li>
-                <li>IV Ciclo | 2024 - II</li>
-              </ul>
-              <br />
-              <ul class="space-y-2">
-                <li>
-                  <img
-                    class="w-60"
-                    src="https://landing.upsjb.edu.pe/hs-fs/hubfs/logo-Nov-15-2020-09-10-40-79-PM.png?width=350&height=90&name=logo-Nov-15-2020-09-10-40-79-PM.png"
-                    alt="Logo Universidad Privada San Juan Bautista"
-                  />
-                </li>
-                <br />
-                <li class="text-parcial">Carrera</li>
-                <li>Ingeniería de Sistemas</li>
-                <br />
-                <li class="text-parcial">Facultad</li>
-                <li>Ingenierías</li>
-              </ul>
-            </div>
-            <hr class="w-full border-parcial" />
-            <div class="text-center md:text-left text-parcial py-4">
-              <p>Copyright © 2024 | Todos los derechos Reservados</p>
-            </div>
+            <p class="text-slate-400 font-medium italic">Docente</p>
+            <p>Mg. Melendez Ramos Julio Genaro</p>
+
+            <p class="text-slate-400 font-medium italic">Período</p>
+            <p>IV Ciclo | 2024 - II</p>
           </div>
-        </footer>
+          <div class="space-y-2 md:w-auto w-full">
+            <img
+              class="w-64 m-auto sm:m-0"
+              src="/images/logo-upsjb.webp"
+              alt=""
+            />
+            <p class="text-slate-400 font-medium italic">Escuela</p>
+            <p>Ingenierias</p>
 
-        <script>
-          tailwind.config = {
-            theme: {
-              extend: {
-                colors: {
-                  primary: "#03172D",
-                  secondary: "#0EA5E9",
-                  light: "#F5F5F5",
-                  dark: "#212325",
-                  parcial: "#6A7077",
-                  hdark: "#031121",
-                },
-                backgroundImage: {
-                  video: "url('./images/video-poster.webp')",
-                },
-              },
-            },
-          };
-        </script>
-      </body>
-    </html>
-    <script type="module" src="script.js"></script>
+            <p class="text-slate-400 font-medium italic">Programa Académico</p>
+            <p>Ingeniería de Sistemas</p>
+          </div>
+        </div>
+        <div class="text-center md:text-left border-t border-slate-400 pt-8">
+          <p>Copyright 2024 | Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/script.js"></script>
   </body>
 </html>
